@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="35dp"
+        android:height="35dp"
+        android:drawable="@drawable/wrapper_btn_carga" />
+    <item
+
+        android:drawable="@drawable/baseline_add_24" />
+
+    <!--    <item android:drawable="@drawable/ic_plus_svgrepo_com"-->
+    <!--        android:width="25dp"-->
+    <!--        android:height="25dp"-->
+
+    <!--        android:gravity="center"/>-->
+</layer-list>

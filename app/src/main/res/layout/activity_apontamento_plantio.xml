@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/LayoutPadraoConstraint"
+    tools:context=".telas.ApontamentoPlantioActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dip"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/LayoutPadraoFrame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:theme="@style/LayoutPadraoConstraintInterno">
+
+                <EditText
+                    android:id="@+id/editData"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="Data"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    tools:ignore="Autofill,DuplicateIds,HardcodedText,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaData"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/editData"
+                    app:layout_constraintStart_toEndOf="@+id/editData"
+                    app:layout_constraintTop_toTopOf="@+id/editData"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <CheckBox
+                    android:id="@+id/cbConcluido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Concluído"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBuscaData"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnBuscaData"
+                    app:layout_constraintTop_toTopOf="@+id/btnBuscaData" />
+
+                <EditText
+                    android:id="@+id/editFazenda"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_fazenda"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editData"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaFazenda"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/editFazenda"
+                    app:layout_constraintStart_toEndOf="@+id/editFazenda"
+                    app:layout_constraintTop_toTopOf="@+id/editFazenda"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTalhao"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_talhao"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toEndOf="@+id/btnBuscaFazenda"
+                    app:layout_constraintTop_toBottomOf="@+id/editData"
+                    tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaTalhao"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:width="2dp"
+                    android:padding="15dip"
+                    app:layout_constraintBottom_toBottomOf="@+id/editTalhao"
+                    app:layout_constraintStart_toEndOf="@+id/editTalhao"
+                    app:layout_constraintTop_toTopOf="@+id/editTalhao"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+                <EditText
+                    android:id="@+id/editConsultaFazenda"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="Nome Fazenda"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editFazenda"
+                    tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editSisPlan"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_sispl"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editConsultaFazenda"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaSisPlan"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/editSisPlan"
+                    app:layout_constraintStart_toEndOf="@+id/editSisPlan"
+                    app:layout_constraintTop_toTopOf="@+id/editSisPlan"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editVariedade"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_variedade"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toEndOf="@+id/btnBuscaSisPlan"
+                    app:layout_constraintTop_toBottomOf="@+id/editConsultaFazenda"
+                    tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaVariedade"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:width="2dp"
+                    android:padding="15dip"
+                    app:layout_constraintBottom_toBottomOf="@+id/editVariedade"
+                    app:layout_constraintStart_toEndOf="@+id/editVariedade"
+                    app:layout_constraintTop_toTopOf="@+id/editVariedade"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editTipo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="@string/campo_tipo"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textSize="20dp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editSisPlan"
+                    tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscaTipo"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/editTipo"
+                    app:layout_constraintStart_toEndOf="@+id/editTipo"
+                    app:layout_constraintTop_toTopOf="@+id/editTipo"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editAreaPlantada"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/campo_area"
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    android:textSize="20sp"
+                    android:theme="@style/LayoutPadraoEditTextLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/btnBuscaTipo"
+                    app:layout_constraintTop_toBottomOf="@+id/editVariedade"
+                    tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/txtCargaMudas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/wrapper_btn_claro"
+                    android:text="Carga de Mudas"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="@+id/rvPlantio"
+                    app:layout_constraintStart_toStartOf="@+id/rvPlantio"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                    tools:ignore="HardcodedText" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTipo">
+
+                    <RadioButton
+                        android:id="@+id/rbLiquidado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lote Liquidado"
+                        android:textSize="22sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbPorConta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lote por Conta"
+                        android:textSize="22sp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wrapper_btn_claro"
+                    android:text="Apontamento de Plantio"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/rvPlantio"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/rvPlantio"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <ImageButton
+                    android:id="@+id/btnAddCarga"
+                    style="@style/LayoutPadraoBttLupa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/wrapper_add_carga"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtCargaMudas"
+                    app:layout_constraintEnd_toEndOf="@+id/txtCargaMudas"
+                    app:layout_constraintTop_toTopOf="@+id/txtCargaMudas"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlantio"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/wrapper_rv_branco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCargaMudas" />
+
+                <Button
+                    android:id="@+id/btn_Salvar"
+                    style="@style/LayoutPadraoBttLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:layout_marginTop="16dp"
+                    android:drawableTint="@color/white"
+                    android:padding="15dip"
+                    android:text="@string/btn_salvar"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvPlantio" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
